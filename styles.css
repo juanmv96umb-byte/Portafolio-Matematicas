@@ -232,4 +232,32 @@ main {
     font-size: 0.7rem;
     opacity: 0.5;
 }
+/* --- CONTENEDOR DEL VISOR --- */
+#visor-container {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #525659; /* Fondo gris profesional */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Estilo para el IFRAME (PDFs) */
+#visor-pdf { 
+    width: 100%; 
+    height: 100%; 
+    border: none;
+    display: none; /* Oculto por defecto, JS lo activará */
+}
+
+/* Estilo para la IMAGEN (Portadas) - LA SOLUCIÓN */
+#visor-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* ESTO ES LA MAGIA: Ajusta la imagen sin deformar */
+    display: none; /* Oculto por defecto */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Sombra elegante */
+}
 

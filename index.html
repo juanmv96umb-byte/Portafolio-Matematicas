@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Portafolio Digital | Juan Valle</title>
+    <style>
+        :root { --uce-blue: #003366; --accent: #0055aa; }
+        body { font-family: 'Segoe UI', sans-serif; display: flex; margin: 0; height: 100vh; background: #f0f2f5; }
+        
+        /* Sidebar Estilo UCE */
+        nav { width: 280px; background: var(--uce-blue); color: white; display: flex; flex-direction: column; overflow-y: auto; }
+        nav .profile { padding: 20px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        nav a { color: white; text-decoration: none; padding: 15px 20px; border-left: 4px solid transparent; transition: 0.3s; cursor: pointer; }
+        nav a:hover { background: var(--accent); border-left-color: #fff; }
+
+        /* Area de Contenido */
+        main { flex-grow: 1; display: flex; flex-direction: column; }
+        .header { background: white; padding: 15px 30px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        #viewer { flex-grow: 1; border: none; width: 100%; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="profile">
+        <h3>Juan Valle</h3>
+        <p>PCEI4-002</p>
+    </div>
+    <a onclick="load('URL_CARATULA')">📌 Carátula General</a>
+    <a onclick="load('URL_SILABO')">📋 Sílabo</a>
+    <a onclick="load('URL_MATERIA')">📖 Apuntes / Materia</a>
+    <a onclick="load('URL_EXAMENES')">📝 Evaluaciones (16)</a>
+    <a onclick="load('URL_TALLERES')">🖋️ Talleres</a>
+    <a onclick="load('URL_LABS')">🧪 Laboratorios (10)</a>
+    <a onclick="load('URL_INDIVIDUAL')">👤 Trabajos Individuales</a>
+    <a onclick="load('URL_GRUPAL')">👥 Trabajos Grupales</a>
+    <a onclick="load('URL_FORMULARIOS')">📐 Formularios</a>
+</nav>
+
+<main>
+    <div class="header">
+        <h2 id="section-title">Universidad Central del Ecuador</h2>
+    </div>
+    <iframe id="viewer" src="BIENVENIDA_HTML"></iframe>
+</main>
+
+<script>
+    function load(url) {
+        // Para Drive usa: https://drive.google.com/preview?id=ID_DEL_ARCHIVO
+        document.getElementById('viewer').src = url;
+    }
+</script>
+
+</body>
+</html>

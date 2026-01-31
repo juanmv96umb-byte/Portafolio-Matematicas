@@ -11,34 +11,56 @@
 <nav>
     <div class="profile">
         <h3>Juan Valle</h3>
-        <p>PCEI4-002</p> </div>
+        <p>PCEI4-002</p>
+    </div>
 
     <div class="menu-container">
-        <div class="menu-section">
-            <h4>🧪 Laboratorios</h4>
-            <a onclick="visualizar('Laboratorio_1.pdf')">Laboratorio 1</a>
-            <a onclick="visualizar('Laboratorio_2.pdf')">Laboratorio 2</a>
-            <a onclick="visualizar('Laboratorio_3.pdf')">Laboratorio 3</a>
-            <a onclick="visualizar('Laboratorio_4.pdf')">Laboratorio 4</a>
-            <a onclick="visualizar('Laboratorio_5.pdf')">Laboratorio 5</a>
-            <a onclick="visualizar('Laboratorio_6.pdf')">Laboratorio 6</a>
-            <a onclick="visualizar('Laboratorio_7.pdf')">Laboratorio 7</a>
-            <a onclick="visualizar('Laboratorio_8.pdf')">Laboratorio 8</a>
-            <a onclick="visualizar('Laboratorio_9.pdf')">Laboratorio 9</a>
+        <div class="tab">
+            <button class="tab-btn" onclick="toggleTab('list-labs')">🧪 Laboratorios</button>
+            <div id="list-labs" class="tab-content">
+                <a onclick="visualizar('Laboratorio_1.pdf')">Laboratorio 1</a>
+                <a onclick="visualizar('Laboratorio_2.pdf')">Laboratorio 2</a>
+                <a onclick="visualizar('Laboratorio_3.pdf')">Laboratorio 3</a>
+                <a onclick="visualizar('Laboratorio_4.pdf')">Laboratorio 4</a>
+                <a onclick="visualizar('Laboratorio_5.pdf')">Laboratorio 5</a>
+                <a onclick="visualizar('Laboratorio_6.pdf')">Laboratorio 6</a>
+                <a onclick="visualizar('Laboratorio_7.pdf')">Laboratorio 7</a>
+                <a onclick="visualizar('Laboratorio_8.pdf')">Laboratorio 8</a>
+                <a onclick="visualizar('Laboratorio_9.pdf')">Laboratorio 9</a>
+            </div>
         </div>
 
-        <div class="menu-section">
-            <h4>👤 Trabajos Individuales</h4>
-            <a onclick="visualizar('Trabajo_individual_1.pdf')">Trabajo Individual 1</a>
-            <a onclick="visualizar('Trabajo_individual_2.pdf')">Trabajo Individual 2</a>
-            <a onclick="visualizar('Trabajo_individual_Mapa_1.pdf')">Mapa Mental 1</a>
+        <div class="tab">
+            <button class="tab-btn" onclick="toggleTab('list-ind')">👤 Trabajos Individuales</button>
+            <div id="list-ind" class="tab-content">
+                <a onclick="visualizar('Trabajo_individual_1.pdf')">Trabajo Individual 1</a>
+                <a onclick="visualizar('Trabajo_individual_2.pdf')">Trabajo Individual 2</a>
+                <a onclick="visualizar('Trabajo_individual_Mapa_1.pdf')">Mapa Mental 1</a>
+                <a onclick="visualizar('Trabajo_individual_Mapa_2.pdf')">Mapa Mental 2</a>
+            </div>
+        </div>
+
+        <div class="tab">
+            <button class="tab-btn" onclick="toggleTab('list-mat')">📖 Materia y Apuntes</button>
+            <div id="list-mat" class="tab-content">
+                <a onclick="visualizar('Ecuacion diferencial.pdf')">Ecuación Diferencial</a>
+                <a onclick="visualizar('Ecuaciones Diferenciales.pdf')">Ecuaciones Diferenciales</a>
+                <a onclick="visualizar('VALORES INICIALES (1).pdf')">Valores Iniciales</a>
+            </div>
+        </div>
+
+        <div class="tab">
+            <button class="tab-btn" onclick="toggleTab('list-eval')">📝 Evaluación</button>
+            <div id="list-eval" class="tab-content">
+                <a onclick="visualizar('Corrección.pdf')">Corrección de Pruebas</a>
+                </div>
         </div>
     </div>
 </nav>
 
 <main>
     <div class="header-bar">
-        <div id="status">Visualizando: <span id="file-name">Seleccione un archivo</span></div>
+        <div id="status">Visualizando: <span id="file-name">Seleccione una sección</span></div>
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Logo_de_la_Universidad_Central_del_Ecuador.png" alt="UCE" height="40">
     </div>
     <iframe id="visor-pdf" src="Laboratorio_1.pdf"></iframe>

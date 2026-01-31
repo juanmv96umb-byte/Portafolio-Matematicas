@@ -1,0 +1,39 @@
+:root { 
+    --uce-blue: #003366; 
+    --accent: #0055aa; 
+}
+
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    display: flex; 
+    margin: 0; 
+    height: 100vh; 
+    overflow: hidden;
+}
+
+nav { 
+    width: 300px; 
+    background: var(--uce-blue); 
+    color: white; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+/* IMPORTANTE: Esto arregla el amontonamiento de tu captura */
+nav a { 
+    display: block; 
+    color: #e0e0e0; 
+    text-decoration: none; 
+    padding: 12px 25px; 
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav a:hover { 
+    background: var(--accent); 
+    padding-left: 35px;
+}
+
+main { flex-grow: 1; display: flex; flex-direction: column; }
+
+#visor-pdf { flex-grow: 1; border: none; width: 100%; }

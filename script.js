@@ -64,3 +64,58 @@ window.onload = function() {
     const visorImg = document.getElementById('visor-img');
     visorImg.style.display = 'block';
 };
+// Función para mostrar la Portada Digital generada con CSS
+function mostrarPortada(titulo, subtitulo) {
+    // 1. Ocultar visores de archivos
+    document.getElementById('visor-pdf').style.display = 'none';
+    document.getElementById('visor-img').style.display = 'none';
+    
+    // 2. Mostrar la portada digital
+    const portada = document.getElementById('portada-digital');
+    portada.style.display = 'flex'; // Usamos flex para centrar
+    
+    // 3. Cambiar el texto dinámicamente
+    document.getElementById('titulo-portada').innerText = titulo;
+    document.getElementById('subtitulo-portada').innerText = subtitulo;
+    
+    // 4. Actualizar barra de estado
+    document.getElementById('file-name').innerText = "Portada: " + subtitulo;
+
+    // 5. Cerrar menú en móvil
+    if (window.innerWidth < 768) {
+        cerrarMenus();
+    }
+}
+
+// Función auxiliar para cerrar menús (para no repetir código)
+function cerrarMenus() {
+    const allTabs = document.querySelectorAll('.tab-content, .sub-tab-content');
+    allTabs.forEach(tab => tab.classList.remove('show'));
+}
+
+// Actualizamos también la función visualizar vieja para que oculte la portada si abres un PDF
+function visualizar(rutaCompleta) {
+    const visorPdf = document.getElementById('visor-pdf');
+    const visorImg = document.getElementById('visor-img');
+    const portada = document.getElementById('portada-digital');
+    const etiqueta = document.getElementById('file-name');
+    
+    // Ocultamos la portada digital siempre que abramos un archivo
+    portada.style.display = 'none';
+
+    // ... (El resto de tu código de extensión PDF/IMG sigue igual aquí) ...
+    // Solo asegúrate de copiar la lógica que ya tenías:
+    const extension = rutaCompleta.split('.').pop().toLowerCase();
+    if (extension === 'pdf') {
+        visorImg.style.display = 'none';
+        visorPdf.style.display = 'block';
+        visorPdf.src = rutaCompleta;
+    } else {
+        visorPdf.style.display = 'none';
+        visorImg.style.display = 'block';
+        visorImg.src = rutaCompleta;
+    }
+    
+    etiqueta.innerText = rutaCompleta.split('/').pop();
+    if (window.innerWidth < 768) cerrarMenus();
+}

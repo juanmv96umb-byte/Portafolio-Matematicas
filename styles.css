@@ -1,7 +1,7 @@
 :root { 
     --uce-blue: #003366; 
     --accent: #0055aa; 
-    --white: #ffffff;
+    --bg-light: #f4f7f6;
 }
 
 body { 
@@ -10,20 +10,31 @@ body {
     margin: 0; 
     height: 100vh; 
     overflow: hidden;
+    background: var(--bg-light); 
 }
 
 /* Sidebar */
 nav { 
     width: 320px; 
     background: var(--uce-blue); 
-    color: var(--white); 
+    color: white; 
     display: flex; 
     flex-direction: column; 
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
 }
 
-.profile { padding: 20px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+nav .profile { 
+    padding: 25px; 
+    text-align: center; 
+    border-bottom: 1px solid rgba(255,255,255,0.1); 
+    background: rgba(0,0,0,0.1);
+}
 
-/* Estilo de la Pestaña (Botón principal) */
+.menu-container {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
 .tab-btn {
     width: 100%;
     background: none;
@@ -40,13 +51,11 @@ nav {
 
 .tab-btn:hover { background: var(--accent); }
 
-/* Contenido de la pestaña (Oculto por defecto) */
 .tab-content {
     display: none;
     background: rgba(0,0,0,0.2);
 }
 
-/* Enlaces dentro de la pestaña */
 .tab-content a {
     display: block;
     padding: 10px 40px;
@@ -55,13 +64,31 @@ nav {
     font-size: 0.9rem;
     cursor: pointer;
     transition: 0.2s;
+    border-left: 3px solid transparent;
 }
 
-.tab-content a:hover { color: white; background: rgba(255,255,255,0.1); }
+.tab-content a:hover { 
+    color: white; 
+    background: rgba(255,255,255,0.1); 
+    border-left: 3px solid #fff;
+}
 
-/* Mostrar pestaña activa */
 .show { display: block; }
 
-main { flex-grow: 1; display: flex; flex-direction: column; background: #f0f2f5; }
-.header-bar { background: white; padding: 10px 25px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-#visor-pdf { flex-grow: 1; border: none; }
+main { flex-grow: 1; display: flex; flex-direction: column; }
+
+.header-bar {
+    background: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#visor-pdf { 
+    flex-grow: 1; 
+    border: none; 
+    width: 100%; 
+    background-color: white;
+}

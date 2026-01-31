@@ -1,16 +1,28 @@
 /**
- * Función para cargar los PDFs en el visor central
- * @param {string} nombreArchivo - El nombre exacto del PDF en GitHub
+ * Controla la apertura y cierre de las pestañas laterales
+ * @param {string} id - El ID de la lista de archivos a mostrar
+ */
+function toggleTab(id) {
+    // Cerramos todas las pestañas primero para un efecto limpio
+    const contents = document.getElementsByClassName("tab-content");
+    for (let i = 0; i < contents.length; i++) {
+        if (contents[i].id !== id) {
+            contents[i].classList.remove("show");
+        }
+    }
+    
+    // Alternamos la visibilidad de la pestaña seleccionada
+    const element = document.getElementById(id);
+    element.classList.toggle("show");
+}
+
+/**
+ * Carga el archivo en el visor
  */
 function visualizar(nombreArchivo) {
     const visor = document.getElementById('visor-pdf');
     const etiqueta = document.getElementById('file-name');
     
-    // Cambiamos la fuente del iframe
     visor.src = nombreArchivo;
-    
-    // Actualizamos el texto del encabezado
     etiqueta.innerText = nombreArchivo;
-    
-    console.log("Cargando archivo: " + nombreArchivo); // Para que revises en la consola (F12)
 }

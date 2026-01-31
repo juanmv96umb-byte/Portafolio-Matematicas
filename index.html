@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Digital | Juan Valle</title>
+    <title>Portafolio Matemáticas IV | Juan Valle</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,60 +12,131 @@
     <div class="profile">
         <h3>Juan Valle</h3>
         <p>PCEI4-002</p>
+        <p style="font-size: 0.8rem; opacity: 0.8;">Pedagogía de las Ciencias Experimentales, Informática</p>
     </div>
 
     <div class="menu-container">
+        
+        <div class="menu-section">
+            <button class="tab-btn" onclick="visualizar('imagenes/portada_principal.jpg')">
+                🏠 Carátula
+            </button>
+        </div>
+
         <div class="tab">
-            <button class="tab-btn" onclick="toggleTab('list-labs')">🧪 Laboratorios</button>
-            <div id="list-labs" class="tab-content">
-                <a onclick="visualizar('Laboratorio_1.pdf')">Laboratorio 1</a>
-                <a onclick="visualizar('Laboratorio_2.pdf')">Laboratorio 2</a>
-                <a onclick="visualizar('Laboratorio_3.pdf')">Laboratorio 3</a>
-                <a onclick="visualizar('Laboratorio_4.pdf')">Laboratorio 4</a>
-                <a onclick="visualizar('Laboratorio_5.pdf')">Laboratorio 5</a>
-                <a onclick="visualizar('Laboratorio_6.pdf')">Laboratorio 6</a>
-                <a onclick="visualizar('Laboratorio_7.pdf')">Laboratorio 7</a>
-                <a onclick="visualizar('Laboratorio_8.pdf')">Laboratorio 8</a>
-                <a onclick="visualizar('Laboratorio_9.pdf')">Laboratorio 9</a>
+            <button class="tab-btn" onclick="visualizar('imagenes/portada_silabo.jpg'); toggleTab('list-silabo')">
+                📋 Sílabo
+            </button>
+            <div id="list-silabo" class="tab-content">
+                <a onclick="visualizar('Silabo/Silabo.pdf')">Ver Sílabo</a>
             </div>
         </div>
 
         <div class="tab">
-            <button class="tab-btn" onclick="toggleTab('list-ind')">👤 Trabajos Individuales</button>
-            <div id="list-ind" class="tab-content">
-                <a onclick="visualizar('Trabajo_individual_1.pdf')">Trabajo Individual 1</a>
-                <a onclick="visualizar('Trabajo_individual_2.pdf')">Trabajo Individual 2</a>
-                <a onclick="visualizar('Trabajo_individual_Mapa_1.pdf')">Mapa Mental 1</a>
-                <a onclick="visualizar('Trabajo_individual_Mapa_2.pdf')">Mapa Mental 2</a>
-            </div>
-        </div>
-
-        <div class="tab">
-            <button class="tab-btn" onclick="toggleTab('list-mat')">📖 Materia y Apuntes</button>
-            <div id="list-mat" class="tab-content">
-                <a onclick="visualizar('Ecuacion diferencial.pdf')">Ecuación Diferencial</a>
-                <a onclick="visualizar('Ecuaciones Diferenciales.pdf')">Ecuaciones Diferenciales</a>
-                <a onclick="visualizar('VALORES INICIALES (1).pdf')">Valores Iniciales</a>
-            </div>
-        </div>
-
-        <div class="tab">
-            <button class="tab-btn" onclick="toggleTab('list-eval')">📝 Evaluación</button>
-            <div id="list-eval" class="tab-content">
-                <a onclick="visualizar('Corrección.pdf')">Corrección de Pruebas</a>
+            <button class="tab-btn" onclick="visualizar('imagenes/portada_materia.jpg'); toggleTab('list-materia')">
+                📖 Materia
+            </button>
+            <div id="list-materia" class="tab-content">
+                <a onclick="visualizar('Materia/U1/Clase 3_ED como modelo matemático (1).pdf')">Clase 3_ED como modelo matemático</a>
+                <a onclick="visualizar('Materia/U1/Clase1_Ampliada.pdf')">Clase1_Ampliada</a>
+                <a onclick="visualizar('Materia/U1/Ecuación diferencial.pdf')">Ecuación diferencial</a>
+                <a onclick="visualizar('Materia/U1/Ecuaciones Diferenciales.pdf')">Ecuaciones Diferenciales</a>
+                <a onclick="visualizar('Materia/U1/Presentación_Silabo_MAT4.pdf')">Presentación_Silabo_MAT4</a>
+                <a onclick="visualizar('Materia/U1/VALORES INICIALES (1).pdf')">VALORES INICIALES</a>
+                <a onclick="visualizar('Materia/U2/ACTIVIDAD Ecuaciones diferenciales Homogéneas.pdf')">ACTIVIDAD Ecuaciones diferenciales Homogéneas</a>
+                <a onclick="visualizar('Materia/U2/ACTIVIDAD Ecuaciones Diferenciales Lineales de Primer Orden.pdf')">ACTIVIDAD Ecuaciones Diferenciales Lineales de Primer Orden</a>
+                <a onclick="visualizar('Materia/U2/Ecuaciones diferenciales de variables separadas (1).pdf')">Ecuaciones diferenciales de variables separadas</a>
+                <a onclick="visualizar('Materia/U2/Ecuaciones diferenciales de variables separadas.pdf')">Ecuaciones diferenciales de variables separadas</a>
+                <a onclick="visualizar('Materia/U2/Ecuaciones diferenciales exactaspdf')">Ecuaciones diferenciales exactas</a>
+                <a onclick="visualizar('Materia/U3/ACTIVIDAD Ecuaciones diferenciales Homogéneas (1).pdf')">ACTIVIDAD Ecuaciones diferenciales Homogéneas</a>
+                <a onclick="visualizar('Materia/U3/ACTIVIDAD Ecuaciones Diferenciales Lineales de Primer Orden (1).pdf')">ACTIVIDAD Ecuaciones Diferenciales Lineales de Primer Orden</a>
+                <a onclick="visualizar('Materia/U3/ACTIVIDADES A Ecuaciones Diferenciales Lineales de Primer Orden.pdf')">ACTIVIDADES A Ecuaciones Diferenciales Lineales de Primer Orden</a>
+                <a onclick="visualizar('Materia/U3/Ecuaciones diferenciales de variables separadas.pdf')">Ecuaciones diferenciales de variables separadas</a>
+                <a onclick="visualizar('Materia/U3/Ecuaciones diferenciales exactas.pdf')">Ecuaciones diferenciales exactas</a>
+                <a onclick="visualizar('Materia/U3/Ecuaciones Diferenciales_Homogeneas_Parte1.pdf')">Ecuaciones Diferenciales_Homogeneas_Parte1</a>
+                <a onclick="visualizar('Materia/U4/Método de bisección.pdf')">Método de bisección</a>
+                <a onclick="visualizar('Materia/U4/Método de la bisección.pdf')">Método de la bisección</a>
+                <a onclick="visualizar('Materia/U4/MÉTODO DE LA FALSA POSICIÓN.pdf')">MÉTODO DE LA FALSA POSICIÓN</a>
+                <a onclick="visualizar('Materia/U4/Método de la Secante.pdf')">Método de la Secante</a>
+                <a onclick="visualizar('Materia/U4/Método de Newton.pdf')">Método de Newton</a>
+                <a onclick="visualizar('Materia/U4/METODO_DE_LA_FALSA_POSICION_1.pdf')">METODO_DE_LA_FALSA_POSICION_1</a>
                 </div>
         </div>
+
+        <div class="tab">
+            <button class="tab-btn" onclick="visualizar('imagenes/portada_individuales.jpg'); toggleTab('list-ind')">
+                👤 Trabajos Individuales
+            </button>
+            <div id="list-ind" class="tab-content">
+                <a onclick="visualizar('Individuales/Corrección.pdf')">Corrección</a>
+                <a onclick="visualizar('Individuales/Trabajo_Individual_1.pdf')">Trabajo 1</a>
+                <a onclick="visualizar('Individuales/Trabajo_Individual_2.pdf')">Trabajo 2</a>
+                <a onclick="visualizar('Individuales/Trabajo_Individual_Mapa_1.pdf')">Trabajo 3</a>
+                <a onclick="visualizar('Individuales/Trabajo_Individual_Mapa_2.pdf')">Trabajo 4</a>
+                <a onclick="visualizar('Individuales/Trabajo_Individual_Mapa_3.pdf')">Trabajo 5</a>
+                <a onclick="visualizar('Individuales/Trabajo_Individual_Mapa_4.pdf')">Trabajo 5</a>
+            </div>
+        </div>
+
+        <div class="tab">
+            <button class="tab-btn" onclick="visualizar('imagenes/portada_grupales.jpg'); toggleTab('list-group')">
+                👥 Trabajos Grupales
+            </button>
+            <div id="list-group" class="tab-content">
+                <a onclick="visualizar('Grupales/Trabajo_Grupal_1.pdf')">Trabajo Grupal 1</a>
+            </div>
+        </div>
+
+        <div class="tab">
+            <button class="tab-btn" onclick="visualizar('imagenes/portada_formularios.jpg'); toggleTab('list-form')">
+                📐 Formularios
+            </button>
+            <div id="list-form" class="tab-content">
+                <a onclick="visualizar('Formularios/Formularios.pdf')">Formularios</a>
+            </div>
+        </div>
+
+        <div class="tab">
+            <button class="tab-btn" onclick="visualizar('imagenes/portada_tarjetas.jpg'); toggleTab('list-cards')">
+                🗂️ Tarjetas
+            </button>
+            <div id="list-cards" class="tab-content">
+                <a onclick="visualizar('Tarjetas/Tarjeta_1.pdf')">Tarjeta 1</a>
+                <a onclick="visualizar('Tarjetas/Tarjeta_2.pdf')">Tarjeta 2</a>
+                <a onclick="visualizar('Tarjetas/Tarjeta_3.pdf')">Tarjeta 3</a>
+            </div>
+        </div>
+
+        <div class="tab">
+            <button class="tab-btn" onclick="visualizar('imagenes/portada_laboratorios.jpg'); toggleTab('list-labs')">
+                🧪 Laboratorio
+            </button>
+            <div id="list-labs" class="tab-content">
+                <a onclick="visualizar('Laboratorios/Laboratorio_1.pdf')">Laboratorio 1</a>
+                <a onclick="visualizar('Laboratorios/Laboratorio_2.pdf')">Laboratorio 2</a>
+                <a onclick="visualizar('Laboratorios/Laboratorio_3.pdf')">Laboratorio 3</a>
+                <a onclick="visualizar('Laboratorios/Laboratorio_4.pdf')">Laboratorio 4</a>
+                <a onclick="visualizar('Laboratorios/Laboratorio_5.pdf')">Laboratorio 5</a>
+                <a onclick="visualizar('Laboratorios/Laboratorio_6.pdf')">Laboratorio 6</a>
+                <a onclick="visualizar('Laboratorios/Laboratorio_7.pdf')">Laboratorio 7</a>
+                <a onclick="visualizar('Laboratorios/Laboratorio_8.pdf')">Laboratorio 8</a>
+                <a onclick="visualizar('Laboratorios/Laboratorio_9.pdf')">Laboratorio 9</a>
+            </div>
+        </div>
+
     </div>
 </nav>
 
 <main>
     <div class="header-bar">
-        <div id="status">Visualizando: <span id="file-name">Seleccione una sección</span></div>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Logo_de_la_Universidad_Central_del_Ecuador.png" alt="UCE" height="40">
+        <div id="status">Visualizando: <span id="file-name">Inicio</span></div>
+        <div style="font-weight: bold; color: #003366;">Universidad Central del Ecuador</div>
     </div>
-    <iframe id="visor-pdf" src="Laboratorio_1.pdf"></iframe>
+    
+    <iframe id="visor-pdf" src="imagenes/portada_principal.jpg"></iframe>
 </main>
 
 <script src="script.js"></script>
+
 </body>
 </html>

@@ -24,30 +24,40 @@
 <nav>
     <div class="profile">
         <h3>Juan Valle</h3>
-        <p>PCEI4-002</p>
+        <p>PCEI4-002</p> </div>
+
+    <div class="menu-section">
+        <h4>🧪 Laboratorios</h4>
+        <a onclick="visualizar('Laboratorio_1.pdf')">Laboratorio 1</a>
+        <a onclick="visualizar('Laboratorio_2.pdf')">Laboratorio 2</a>
+        </div>
+
+    <div class="menu-section">
+        <h4>👤 Trabajos Individuales</h4>
+        <a onclick="visualizar('Trabajo_Individual_1.pdf')">Trabajo 1</a>
+        <a onclick="visualizar('Trabajo_Individual_2.pdf')">Trabajo 2</a>
     </div>
-    <a onclick="load('URL_CARATULA')">📌 Carátula General</a>
-    <a onclick="load('URL_SILABO')">📋 Sílabo</a>
-    <a onclick="load('URL_MATERIA')">📖 Apuntes / Materia</a>
-    <a onclick="load('URL_EXAMENES')">📝 Evaluaciones (16)</a>
-    <a onclick="load('URL_TALLERES')">🖋️ Talleres</a>
-    <a onclick="load('URL_LABS')">🧪 Laboratorios (10)</a>
-    <a onclick="load('URL_INDIVIDUAL')">👤 Trabajos Individuales</a>
-    <a onclick="load('URL_GRUPAL')">👥 Trabajos Grupales</a>
-    <a onclick="load('URL_FORMULARIOS')">📐 Formularios</a>
+
+    <div class="menu-section">
+        <h4>📖 Materia y Apuntes</h4>
+        <a onclick="visualizar('Ecuaciones Diferenciales.pdf')">Ecuaciones Diferenciales</a>
+        <a onclick="visualizar('VALORES INICIALES (1).pdf')">Valores Iniciales</a>
+    </div>
 </nav>
 
 <main>
-    <div class="header">
-        <h2 id="section-title">Universidad Central del Ecuador</h2>
-    </div>
-    <iframe id="viewer" src="BIENVENIDA_HTML"></iframe>
+    <div id="status">Visualizando: <span id="file-name">Seleccione un archivo</span></div>
+    <iframe id="visor-pdf" src="portada_matematica.png"></iframe>
 </main>
 
 <script>
-    function load(url) {
-        // Para Drive usa: https://drive.google.com/preview?id=ID_DEL_ARCHIVO
-        document.getElementById('viewer').src = url;
+    function visualizar(nombreArchivo) {
+        // Actualiza el 'src' del iframe con el nombre del PDF
+        const visor = document.getElementById('visor-pdf');
+        const etiqueta = document.getElementById('file-name');
+        
+        visor.src = nombreArchivo;
+        etiqueta.innerText = nombreArchivo;
     }
 </script>
 

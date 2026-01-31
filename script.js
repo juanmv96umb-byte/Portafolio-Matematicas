@@ -24,20 +24,32 @@ function toggleSubTab(id) {
     }
 }
 
-/* Función para cargar el PDF y cerrar el menú en móviles */
 function visualizar(rutaCompleta) {
-    const visor = document.getElementById('visor-pdf');
+    const visorPdf = document.getElementById('visor-pdf');
+    const visorImg = document.getElementById('visor-img');
     const etiqueta = document.getElementById('file-name');
     
-    // Cargar el archivo
-    visor.src = rutaCompleta;
-    
-    // Actualizar nombre
-    const nombreArchivo = rutaCompleta.split('/').pop();
-    etiqueta.innerText = nombreArchivo;
+    // 1. Detectamos la extensión del archivo
+    // Tomamos lo que está después del último punto (.)
+    const extension = rutaCompleta.split('.').pop().toLowerCase();
 
-    // --- AUTO-CIERRE PARA MÓVILES ---
-    // Si la pantalla es pequeña (celular/tablet), cerramos todo al hacer clic
+    // 2. Lógica de conmutación (Switch)
+    if (extension === 'pdf') {
+        // Si es PDF: Ocultamos imagen, mostramos iframe
+        visorImg.style.display = 'none';
+        visorPdf.style.display = 'block';
+        visorPdf.src = rutaCompleta;
+    } else {
+        // Si es Imagen (jpg, png, etc.): Ocultamos iframe, mostramos imagen
+        visorPdf.style.display = 'none';
+        visorImg.style.display = 'block';
+        visorImg.src = rutaCompleta;
+    }
+    
+    // 3. Actualizamos el nombre en la barra
+    etiqueta.innerText = rutaCompleta.split('/').pop();
+
+    // 4. Auto-cierre para móviles (como ya tenías)
     if (window.innerWidth < 768) {
         const allTabs = document.querySelectorAll('.tab-content, .sub-tab-content');
         allTabs.forEach(tab => {
@@ -45,3 +57,10 @@ function visualizar(rutaCompleta) {
         });
     }
 }
+
+// INICIALIZACIÓN: Asegurarnos de que al cargar la página se vea la portada
+window.onload = function() {
+    // Forzamos la visualización de la portada inicial como imagen
+    const visorImg = document.getElementById('visor-img');
+    visorImg.style.display = 'block';
+};

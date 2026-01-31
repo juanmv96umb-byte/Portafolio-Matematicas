@@ -16,15 +16,14 @@
     </div>
 
     <div class="menu-container">
-        
         <div class="menu-section">
-            <button class="tab-btn" onclick="visualizar('imagenes/portada_principal.jpg')">
+            <button class="tab-btn" onclick="mostrarPortada('MATEMÁTICAS IV', 'PORTAFOLIO ESTUDIANTIL')">
                 🏠 Carátula
             </button>
         </div>
 
         <div class="tab">
-            <button class="tab-btn" onclick="visualizar('imagenes/portada_silabo.jpg'); toggleTab('list-silabo')">
+            <button class="tab-btn" onclick="mostrarPortada('SÍLABO', 'PLANIFICACIÓN ACADÉMICA'); toggleTab('list-silabo')">
                 📋 Sílabo
             </button>
             <div id="list-silabo" class="tab-content">
@@ -33,7 +32,7 @@
         </div>
 
         <div class="tab">
-            <button class="tab-btn" onclick="visualizar('imagenes/portada_materia.jpg'); toggleTab('list-materia')">
+            <button class="tab-btn" onclick="mostrarPortada('MATERIA', 'APUNTES DE CLASE'); toggleTab('list-materia')">
                 📖 Materia
             </button>
             <div id="list-materia" class="tab-content">
@@ -81,7 +80,7 @@
         </div>
 
         <div class="tab">
-            <button class="tab-btn" onclick="visualizar('imagenes/portada_examenes.jpg'); toggleTab('list-pruebas')">
+            <button class="tab-btn" onclick="mostrarPortada('PRUEBAS', 'EVALUACIONES Y EXÁMENES'); toggleTab('list-pruebas')">
                 📝 Pruebas
             </button>
             <div id="list-pruebas" class="tab-content">
@@ -105,7 +104,7 @@
         </div>
 
         <div class="tab">
-            <button class="tab-btn" onclick="visualizar('imagenes/portada_individuales.jpg'); toggleTab('list-ind')">
+            <button class="tab-btn" onclick="mostrarPortada('TRABAJOS INDIVIDUALES', 'ACTIVIDADES AUTÓNOMAS'); toggleTab('list-ind')">
                 👤 Trabajos Individuales
             </button>
             <div id="list-ind" class="tab-content">
@@ -120,7 +119,7 @@
         </div>
 
         <div class="tab">
-            <button class="tab-btn" onclick="visualizar('imagenes/portada_grupales.jpg'); toggleTab('list-group')">
+            <button class="tab-btn" onclick="mostrarPortada('TRABAJOS GRUPALES', 'APRENDIZAJE COLABORATIVO'); toggleTab('list-group')">
                 👥 Trabajos Grupales
             </button>
             <div id="list-group" class="tab-content">
@@ -129,7 +128,7 @@
         </div>
 
         <div class="tab">
-            <button class="tab-btn" onclick="visualizar('imagenes/portada_formularios.jpg'); toggleTab('list-form')">
+            <button class="tab-btn" onclick="mostrarPortada('FORMULARIOS', 'FÓRMULAS MATEMÁTICAS'); toggleTab('list-form')">
                 📐 Formularios
             </button>
             <div id="list-form" class="tab-content">
@@ -138,7 +137,7 @@
         </div>
 
         <div class="tab">
-            <button class="tab-btn" onclick="visualizar('imagenes/portada_tarjetas.jpg'); toggleTab('list-cards')">
+            <button class="tab-btn" onclick="mostrarPortada('TARJETAS', 'RESÚMENES Y FLASHCARDS'); toggleTab('list-cards')">
                 🗂️ Tarjetas
             </button>
             <div id="list-cards" class="tab-content">
@@ -149,7 +148,7 @@
         </div>
 
         <div class="tab">
-            <button class="tab-btn" onclick="visualizar('imagenes/portada_laboratorios.jpg'); toggleTab('list-labs')">
+            <button class="tab-btn" onclick="mostrarPortada('LABORATORIO', 'PRÁCTICAS EXPERIMENTALES'); toggleTab('list-labs')">
                 🧪 Laboratorio
             </button>
             <div id="list-labs" class="tab-content">
@@ -205,6 +204,7 @@
 
 </body>
 </html>
+
 
 
 

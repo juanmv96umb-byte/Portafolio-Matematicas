@@ -187,3 +187,49 @@ main {
         padding: 10px;
     }
 }
+/* --- ESTILOS PARA SUB-CARPETAS (Unidades) --- */
+.sub-tab-btn {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05); /* Un poco más claro que el fondo */
+    border: none;
+    color: #e0e0e0;
+    padding: 12px 15px 12px 30px; /* Más sangría a la izquierda */
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255,255,255,0.02);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-tab-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* Contenedor de los archivos de la unidad */
+.sub-tab-content {
+    display: none; /* Oculto por defecto */
+    background: rgba(0, 0, 0, 0.4); /* Fondo más oscuro para diferenciar */
+    border-left: 2px solid var(--accent); /* Línea decorativa lateral */
+}
+
+.sub-tab-content.show {
+    display: block;
+}
+
+/* Ajuste para los links dentro de sub-carpetas */
+.sub-tab-content a {
+    padding-left: 50px; /* Mucha sangría para que se vea jerárquico */
+    font-size: 0.85rem;
+}
+
+/* Flechita decorativa para las unidades */
+.sub-tab-btn::after {
+    content: '▼';
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+
